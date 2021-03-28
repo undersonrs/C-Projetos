@@ -6,6 +6,7 @@ class Carros
 {
 public:
 int ano, km;
+
 string placa, modelo, marca;
 
 bool aceleracao, motor;
@@ -36,20 +37,33 @@ void Acelerar()
     }
 }
 
+void inserirAno(int a)
+{
+    ano = a;
+}
+
+void inserirKm(int k)
+{
+    km = k;
+}
+
 };
 
 int main()
 {
 Carros meuIdea;
-meuIdea.ano = 2012;
-meuIdea.km = 112000;
+
+meuIdea.inserirAno(2012);
+meuIdea.inserirKm(112000);
+
 meuIdea.marca = "Fiat";
 meuIdea.modelo = "Idea";
 
-cout << meuIdea.ano << endl;
-cout << meuIdea.km << endl;
 cout << meuIdea.marca << endl;
 cout << meuIdea.modelo << endl;
+
+cout << meuIdea.ano << endl;
+cout << meuIdea.km  << endl;
 
 meuIdea.LigarMotor();
 
